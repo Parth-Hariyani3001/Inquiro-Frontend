@@ -5,9 +5,13 @@ import { Separator } from '#/components/ui/separator.tsx'
 import { cn } from '#/lib/utils.ts'
 import { createFileRoute, Link, Outlet } from '@tanstack/react-router'
 import { ArrowLeft } from 'lucide-react'
+import { requireGuest } from '#/lib/auth.ts'
 
 export const Route = createFileRoute('/_auth')({
   component: RouteComponent,
+  beforeLoad: async () => {
+    return await requireGuest()
+  },
 })
 
 function RouteComponent() {
