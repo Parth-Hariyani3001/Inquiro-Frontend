@@ -1,31 +1,35 @@
-import { Button } from '@/components/ui/button'
+import { Link } from '@tanstack/react-router'
+import { buttonVariants } from '@/components/ui/button'
 import { Logo } from '@/components/logo'
-import { NavMenu } from '@/components/nav-menu'
 import { NavigationSheet } from '@/components/navigation-sheet'
 import { ModeToggle } from './mode-toggle'
+import { cn } from '@/lib/utils'
 
 const Navbar = () => {
   return (
-    <nav className="h-16 border-b bg-background">
-      <div className="mx-auto flex h-full max-w-(--breakpoint-xl) items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="border-b bg-background">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Logo />
-
-        {/* Desktop Menu */}
-        <NavMenu className="hidden md:block" />
-
-        <div className="flex items-center gap-3">
-          <Button className="hidden sm:inline-flex" variant="outline">
-            Sign In
-          </Button>
-          <Button>Get Started</Button>
+        <div className="flex items-center gap-1 sm:gap-2">
           <ModeToggle />
-          {/* Mobile Menu */}
-          <div className="md:hidden">
+          <Link
+            className={cn(buttonVariants({ variant: 'ghost' }), 'hidden sm:inline-flex')}
+            to="/sign-in/$"
+          >
+            Sign in
+          </Link>
+          <Link
+            className={cn(buttonVariants(), 'hidden sm:inline-flex')}
+            to="/sign-up/$"
+          >
+            Create account
+          </Link>
+          <div className="sm:hidden">
             <NavigationSheet />
           </div>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
 

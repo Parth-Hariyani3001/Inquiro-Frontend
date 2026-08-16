@@ -32,11 +32,21 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       {
         title: 'Inquiro',
       },
+      {
+        name: 'description',
+        content:
+          'Find research papers, read them in full, and ask questions grounded in the text.',
+      },
     ],
     links: [
       {
         rel: 'stylesheet',
         href: appCss,
+      },
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/favicon.svg',
       },
     ],
   }),
@@ -50,7 +60,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <ThemeProvider defaultTheme="dark" storageKey="inquiro-theme">
+        <ThemeProvider defaultTheme="light" storageKey="inquiro-theme">
           <ClerkProvider>
             {children}
             {/* <TanStackDevtools
