@@ -4,34 +4,33 @@ overview: Build a full dashboard shell with a collapsible sidebar (Explore nav +
 todos:
   - id: shadcn-install
     content: "Install/verify shadcn components: sidebar, avatar, input, input-group, select, popover, label, tooltip, toggle-group, field, empty"
-    status: pending
+    status: completed
   - id: app-sidebar
     content: Create src/components/app-sidebar.tsx with Explore nav item
-    status: pending
+    status: completed
   - id: nav-user
     content: Create src/components/nav-user.tsx with Clerk user data + logout
-    status: pending
+    status: completed
   - id: dashboard-layout
     content: Update src/routes/dashboard/route.tsx to use SidebarProvider/SidebarInset + header
-    status: pending
+    status: completed
   - id: dashboard-redirect
     content: Redirect /dashboard to /dashboard/explore
-    status: pending
+    status: completed
   - id: openalex-lib
     content: Add src/lib/openalex.ts with filter types and buildOpenAlexQuery helper
-    status: pending
+    status: completed
   - id: explore-search-ui
     content: Build src/components/explore/openalex-search.tsx (search bar, filters popover, chips, query preview, empty state)
-    status: pending
+    status: completed
   - id: wire-explore-page
     content: Render OpenAlexSearch in src/routes/dashboard/explore/index.tsx
-    status: pending
+    status: completed
   - id: lint-check
     content: Run linter and fix any issues introduced
-    status: pending
+    status: completed
 isProject: true
 ---
-
 
 # Dashboard Sidebar Layout + OpenAlex Search UI
 
