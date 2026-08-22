@@ -5,13 +5,9 @@ import {
 } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
-
 import ClerkProvider from '../integrations/clerk/provider'
-
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
-
 import appCss from '../styles.css?url'
-
 import type { QueryClient } from '@tanstack/react-query'
 import { ThemeProvider } from '#/components/theme-provider.tsx'
 
@@ -63,7 +59,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <ThemeProvider defaultTheme="light" storageKey="inquiro-theme">
           <ClerkProvider>
             {children}
-            {/* <TanStackDevtools
+            <TanStackDevtools
               config={{
                 position: 'bottom-right',
               }}
@@ -74,7 +70,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                 },
                 TanStackQueryDevtools,
               ]}
-            /> */}
+            />
           </ClerkProvider>
           <Scripts />
         </ThemeProvider>

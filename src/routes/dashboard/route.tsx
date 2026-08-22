@@ -7,12 +7,15 @@ import {
   SidebarTrigger,
 } from '#/components/ui/sidebar.tsx'
 import { requireAuth } from '#/lib/auth.ts'
+import { meQueryOptions } from '#/lib/me.ts'
 import { createFileRoute, Outlet, useRouterState } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/dashboard')({
   component: RouteComponent,
-  beforeLoad: async () => {
-    return await requireAuth()
+  beforeLoad: async ({ context }) => {
+    const session = await requireAuth()
+    await context.queryClient.ensureQueryData(meQueryOptions())
+    return session
   },
 })
 

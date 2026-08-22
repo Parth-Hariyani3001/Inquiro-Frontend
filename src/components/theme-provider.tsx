@@ -28,8 +28,6 @@ const ThemeProviderContext = createContext<ThemeProviderState>({
 
 function applyTheme(theme: Theme) {
   const root = document.documentElement
-  root.classList.remove('light', 'dark')
-
   const resolved =
     theme === 'system'
       ? window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -37,8 +35,16 @@ function applyTheme(theme: Theme) {
         : 'light'
       : theme
 
-  root.classList.add(resolved)
+  root.classList.add('theme-switching')
+  root.classList.toggle('dark', resolved === 'dark')
+  root.classList.toggle('light', resolved === 'light')
   root.style.colorScheme = resolved
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      root.classList.remove('theme-switching')
+    })
+  })
 }
 
 export function ThemeProvider({
@@ -75,6 +81,7 @@ export function ThemeProvider({
 
   const setTheme = (next: Theme) => {
     localStorage.setItem(storageKey, next)
+    applyTheme(next)
     setThemeState(next)
   }
 

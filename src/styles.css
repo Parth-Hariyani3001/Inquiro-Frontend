@@ -227,3 +227,11 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition: none !important;
+  animation: none !important;
+}
