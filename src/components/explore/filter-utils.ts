@@ -2,8 +2,8 @@ import type {
   OpenAccessFilter,
   OpenAlexFilters,
   SortOptionId,
-} from '@/lib/openalex'
-import { DEFAULT_OPENALEX_FILTERS, SORT_OPTIONS } from '@/lib/openalex'
+} from '#/lib/openalex.ts'
+import { DEFAULT_OPENALEX_FILTERS, SORT_OPTIONS } from '#/lib/openalex.ts'
 
 export const OPEN_ACCESS_OPTIONS: Array<{
   id: OpenAccessFilter

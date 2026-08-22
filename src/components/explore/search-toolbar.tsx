@@ -8,10 +8,10 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from '@/components/ui/input-group'
-import { FilterChips } from '@/components/explore/filter-chips'
-import { FiltersPopover } from '@/components/explore/filters-popover'
-import { countActiveFilters } from '@/components/explore/filter-utils'
-import type { OpenAlexFilters } from '@/lib/openalex'
+import { FilterChips } from '#/components/explore/filter-chips.tsx'
+import { FiltersPopover } from '#/components/explore/filters-popover.tsx'
+import { countActiveFilters } from '#/components/explore/filter-utils.ts'
+import type { OpenAlexFilters } from '#/lib/openalex.ts'
 
 export function SearchToolbar({
   searchDraft,

@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Spinner } from '@/components/ui/spinner'
-import { WorkResult } from '@/components/explore/work-result'
-import type { OpenAlexWork } from '@/lib/openalex'
+import { WorkResult } from '#/components/explore/work-result.tsx'
+import type { OpenAlexWork } from '#/lib/openalex.ts'
 
 export function WorksCatalog({
   query,

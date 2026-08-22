@@ -1,9 +1,9 @@
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
-import type { OpenAlexFilters } from '@/lib/openalex'
-import { DEFAULT_OPENALEX_FILTERS } from '@/lib/openalex'
-import { openAccessLabel, sortLabel } from '@/components/explore/filter-utils'
+import type { OpenAlexFilters } from '#/lib/openalex.ts'
+import { DEFAULT_OPENALEX_FILTERS } from '#/lib/openalex.ts'
+import { openAccessLabel, sortLabel } from '#/components/explore/filter-utils.ts'
 
 export function FilterChips({
   filters,

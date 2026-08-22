@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import type { OpenAlexWork } from '@/lib/openalex'
+import type { OpenAlexWork } from '#/lib/openalex.ts'
 
 function formatDoi(doi: string) {
   return doi.replace(/^https?:\/\/doi\.org\//i, '')

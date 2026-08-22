@@ -2,13 +2,13 @@ import {
   SearchIdle,
   SearchError,
   SearchNoResults,
-} from '@/components/explore/search-status'
-import { SearchToolbar } from '@/components/explore/search-toolbar'
-import { useOpenAlexSearch } from '@/components/explore/use-openalex-search'
+} from '#/components/explore/search-status.tsx'
+import { SearchToolbar } from '#/components/explore/search-toolbar.tsx'
+import { useOpenAlexSearch } from '#/components/explore/use-openalex-search.ts'
 import {
   WorksCatalog,
   WorksCatalogSkeleton,
-} from '@/components/explore/works-catalog'
+} from '#/components/explore/works-catalog.tsx'
 
 export function OpenAlexSearch() {
   const search = useOpenAlexSearch()

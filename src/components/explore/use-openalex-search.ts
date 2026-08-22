@@ -5,12 +5,12 @@ import { useQuery } from '@tanstack/react-query'
 import { getRouteApi } from '@tanstack/react-router'
 import type { Key, Selection } from 'react-aria-components'
 
-import { filterKey } from '@/components/explore/filter-utils'
+import { filterKey } from '#/components/explore/filter-utils.ts'
 import type {
   OpenAccessFilter,
   OpenAlexFilters,
   SortOptionId,
-} from '@/lib/openalex'
+} from '#/lib/openalex.ts'
 import {
   DEFAULT_OPENALEX_FILTERS,
   OPENALEX_PER_PAGE,
@@ -18,7 +18,7 @@ import {
   filtersToExploreSearch,
   searchWorksQueryOptions,
   toSearchWorksParams,
-} from '@/lib/openalex'
+} from '#/lib/openalex.ts'
 
 const exploreRoute = getRouteApi('/dashboard/explore/')
 

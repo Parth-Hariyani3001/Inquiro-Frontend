@@ -21,9 +21,9 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
-import type { OpenAlexFilters } from '@/lib/openalex'
-import { SORT_OPTIONS } from '@/lib/openalex'
-import { OPEN_ACCESS_OPTIONS } from '@/components/explore/filter-utils'
+import type { OpenAlexFilters } from '#/lib/openalex.ts'
+import { SORT_OPTIONS } from '#/lib/openalex.ts'
+import { OPEN_ACCESS_OPTIONS } from '#/components/explore/filter-utils.ts'
 
 export function FiltersPopover({
   isOpen,
